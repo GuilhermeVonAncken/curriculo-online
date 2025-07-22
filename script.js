@@ -84,20 +84,15 @@ function typeEffect() {
   typingElement.textContent = currentText.substring(0, charIndex);
   setTimeout(typeEffect, typingForward ? 100 : 60);
 }
-
 typeEffect();
 
+// ScrollReveal animations
+ScrollReveal().reveal('.hero', { origin: 'top', duration: 1000 });
+ScrollReveal().reveal('.skills-grid', { origin: 'left', distance: '60px' });
+ScrollReveal().reveal('.carousel-section', { origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.contact-form', { origin: 'bottom', delay: 500 });
 
-// ScrollReveal
-ScrollReveal().reveal('.skills-grid, .carousel-track, .contact', {
-  delay: 300,
-  distance: '50px',
-  origin: 'bottom',
-  duration: 1000,
-  reset: true
-});
-
-// Tema Claro/Escuro
+// Toggle Tema
 function toggleTheme() {
   document.body.classList.toggle('light-theme');
 }
