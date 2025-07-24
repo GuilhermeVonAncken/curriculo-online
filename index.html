@@ -1,81 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guilherme Von Ancken - Currículo Online</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-  <!-- Hero Section com Imagem -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="Imagem_Me.jpg" alt="Foto de Guilherme Von Ancken" class="profile-img"/>
-      <div>
-        <h1>Guilherme Von Ancken</h1>
-        <h2 class="typing-text" id="typing"></h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guilherme Von Ancken - Currículo Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Hero Section com Imagem -->
+    <section class="hero">
+      <div class="hero-content">
+        <img
+          src="Imagem_Me.jpg"
+          alt="Foto de Guilherme Von Ancken"
+          class="profile-img"
+        />
+        <div>
+          <h1>Guilherme Von Ancken</h1>
+          <h2 class="typing-text" id="typing"></h2>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills Section -->
-  <section class="skills">
-    <h2>Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill"><i class="fa-solid fa-code"></i>HTML5/CSS3/JS</div>
-      <div class="skill"><i class="fa-brands fa-react"></i>Front-End</div>
-      <div class="skill"><i class="fa-solid fa-robot"></i>AI Agents</div>
-      <div class="skill"><i class="fa-solid fa-gears"></i>Automação</div>
-      <div class="skill"><i class="fa-brands fa-nfc-directional"></i>LangChain</div>
-      <div class="skill"><i class="fa-solid fa-diagram-project"></i>N8N, Make, Zapier</div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section class="skills">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fa-solid fa-code"></i>HTML5/CSS3/JS</div>
+        <div class="skill"><i class="fa-brands fa-react"></i>Front-End</div>
+        <div class="skill"><i class="fa-solid fa-robot"></i>AI Agents</div>
+        <div class="skill"><i class="fa-solid fa-gears"></i>Automação</div>
+        <div class="skill">
+          <i class="fa-brands fa-nfc-directional"></i>LangChain
+        </div>
+        <div class="skill">
+          <i class="fa-solid fa-diagram-project"></i>N8N, Make, Zapier
+        </div>
+      </div>
+    </section>
 
-  <!-- Experience Carousel -->
-  <section class="carousel-section">
-    <h2>Experiência Profissional</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="exp-carousel"></div>
-    </div>
-  </section>
+    <!-- Experience Carousel -->
+    <section class="carousel-section">
+      <h2>Experiência Profissional</h2>
+      <div class="carousel-wrapper">
+        <button class="arrow left" onclick="scrollCarousel('exp-carousel', -1)">
+          ❮
+        </button>
+        <div class="carousel">
+          <div class="carousel-track" id="exp-carousel"></div>
+        </div>
+        <button class="arrow right" onclick="scrollCarousel('exp-carousel', 1)">
+          ❯
+        </button>
+      </div>
+    </section>
 
-  <!-- Education Carousel -->
-  <section class="carousel-section">
-    <h2>Educação</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="edu-carousel"></div>
-    </div>
-  </section>
+    <!-- Education Carousel -->
+    <section class="carousel-section">
+      <h2>Educação</h2>
+      <div class="carousel-wrapper">
+        <button class="arrow left" onclick="scrollCarousel('edu-carousel', -1)">
+          ❮
+        </button>
+        <div class="carousel">
+          <div class="carousel-track" id="edu-carousel"></div>
+        </div>
+        <button class="arrow right" onclick="scrollCarousel('edu-carousel', 1)">
+          ❯
+        </button>
+      </div>
+    </section>
 
-  <!-- Contato -->
-  <footer class="contact">
-    <h2>Contato</h2>
-    <p><i class="fa-solid fa-envelope"></i> guivonancken@gmail.com</p>
-    <p><i class="fa-solid fa-phone"></i> +55 11 94796-1874</p>
-    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/GuilhermeVonAncken">GitHub</a></p>
-    <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/guilherme-von-ancken-76701960/">LinkedIn</a></p>
+    <!-- Contato -->
+    <footer class="contact">
+      <h2>Contato</h2>
+      <p><i class="fa-solid fa-envelope"></i> guivonancken@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> +55 11 94796-1874</p>
+      <p>
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/GuilhermeVonAncken">GitHub</a>
+      </p>
+      <p>
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/guilherme-von-ancken-76701960/"
+          >LinkedIn</a
+        >
+      </p>
 
-    <button onclick="toggleTheme()" class="theme-toggle">Alternar Tema</button>
-    <a href="GuilhermeVonAncken.pdf" download class="download-btn">
-      <i class="fa-solid fa-file-arrow-down"></i> Baixar Currículo PDF
-    </a>
-  </footer>
+      <button onclick="toggleTheme()" class="theme-toggle">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alternar Tema
+      </button>
 
-  <section class="contact-form">
-    <h2>Envie uma mensagem</h2>
-    <form action="https://formsubmit.co/guivonancken@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <textarea name="message" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+      <a href="GuilhermeVonAncken.pdf" download class="download-btn">
+        <i class="fa-solid fa-file-arrow-down"></i> Baixar Currículo PDF
+      </a>
+    </footer>
 
-</body>
+    <section class="contact-form">
+      <h2>Envie uma mensagem</h2>
+      <form action="https://formsubmit.co/guivonancken@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </body>
 </html>
