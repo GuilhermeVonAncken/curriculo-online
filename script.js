@@ -113,3 +113,24 @@ ScrollReveal().reveal(".profile-img", {
   easing: "ease-out",
   reset: true,
 });
+// Ativa clique nos itens do carrossel
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".carousel-track > div").forEach((item) => {
+    item.style.cursor = "pointer";
+    item.addEventListener("click", () => {
+      const modal = document.createElement("div");
+      modal.className = "modal";
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <div class="modal-body">${item.innerHTML}</div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      modal.querySelector(".close-btn").onclick = () => {
+        modal.remove();
+      };
+    });
+  });
+});
